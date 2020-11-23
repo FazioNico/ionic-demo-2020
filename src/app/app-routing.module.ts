@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent
+  },
+  {
+    path: 'tabs',
+    loadChildren: () => import('./features/tabs/tabs.module').then(m => m.TabsModule)
   }
 ];
 
